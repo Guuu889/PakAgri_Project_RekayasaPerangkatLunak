@@ -1,0 +1,191 @@
+:root {
+  --primary: #abc437;
+  --sec: #442d0d;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+  min-height: 2000px;
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-direction: column; /* Mengatur tata letak menjadi kolom */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  padding: 1.4rem 7%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #d9d9d9;
+  position: fixed;
+  background: linear-gradient(
+    180deg,
+    #d9d9d9 8.88%,
+    rgba(217, 217, 217, 0) 100.53%
+  );
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+/* Logo */
+.navbar .navbar-logo {
+  margin: auto;
+}
+
+/* Navbar Navigation */
+.navbar .navbar-nav {
+  display: flex;
+  margin-top: 1rem; /* Atur margin di atas navbar-nav agar terpisah dari logo */
+}
+
+.navbar .navbar-nav a {
+  /* Anda dapat mengatur properti styling sesuai kebutuhan */
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 4.75rem; /* Atur margin antara setiap tautan */
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--sec);
+}
+
+.navbar .navbar-nav a:after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--sec);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #442d0d;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--sec);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+/*Menu Section*/
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Menengahkan secara horizontal */
+  background-image: url(../images/gambarberanda.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
+  height: 29.375rem;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 8%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.hero .content {
+  padding: 1.4rem 7%;
+  max-width: 60rem;
+  text-align: center; /* Menengahkan secara vertical */
+}
+
+.hero .content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem; /* Mengurangi margin-bottom pada h1 */
+}
+
+.hero .content h2 {
+  font-size: 1.125rem;
+  margin-top: 2rem; /* Menambah margin-top pada h2 */
+  margin-bottom: 1rem; /* Mengurangi margin-bottom pada h2 */
+}
+
+.hero .content .cta {
+  margin-top: 3rem; /* Menambah margin-top pada tombol login */
+  margin-bottom: 2rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #607c3c;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/*artikel*/
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem; /* Atur margin atas antar kotak */
+}
+
+.article-box {
+  width: 22rem;
+  height: 13.5625rem;
+  flex-shrink: 0;
+  background-color: #4caf50; /* Warna hijau */
+  margin-bottom: 1rem; /* Atur margin bawah antar kotak */
+  padding: 1rem; /* Atur padding di dalam kotak */
+  color: #fff; /* Warna teks putih agar terlihat kontras */
+}
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/* Hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 62.5%;
+  }
+}

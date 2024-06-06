@@ -1,0 +1,647 @@
+:root {
+    --primary: #abc437;
+    --sec: #442d0d;
+    --bg: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .material-symbols-rounded {
+    font-family: 'Material Icons';
+    /* tambahkan properti CSS lainnya sesuai kebutuhan */
+    font-size: 28px;
+}
+
+
+  /* Navbar */
+
+
+
+.navbar {
+    display: flex;
+    flex-direction: row; /* Mengatur tata letak menjadi kolom */
+    justify-content: center;
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    padding: 0.5rem 7%;
+    background-color: #ffffff;
+    position: fixed;
+    background: linear-gradient(
+      180deg,
+      #d9d9d9 8.88%,
+      rgba(217, 217, 217, 0) 100.53%
+    );
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+
+
+navbar .navbar-nav a {
+    /* Anda dapat mengatur properti styling sesuai kebutuhan */
+  
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 4.75rem;
+    /* Atur margin antara setiap tautan */
+  }
+  
+  .navbar .navbar-nav {
+    display: flex;
+    margin-top: 1rem; /* Atur margin di atas navbar-nav agar terpisah dari logo */
+    
+  }
+
+  .navbar .navbar-nav a {
+    /* Anda dapat mengatur properti styling sesuai kebutuhan */
+  
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 4.75rem;
+    /* Atur margin antara setiap tautan */
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: var(--sec);
+  }
+  
+  .navbar .navbar-nav a:after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--sec);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .navbar .navbar-extra a {
+    color: #442d0d;
+    margin: 0 0.5rem;
+  }
+  
+  .navbar .navbar-extra a:hover {
+    color: var(--sec);
+  }
+
+  .nav-active{
+    font-weight: 700!important;
+  }
+  
+  .nav-icon img{
+    width: 20px;
+    margin-left: 50px ;
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* kalender */
+
+  .wrapper {
+    margin-top: 100px;
+    width: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 30px 38px 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+header .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+header .icons span {
+    height: auto;
+    width: 40px;
+    cursor: pointer;
+    color: #000;
+    text-align: center;
+    line-height: 38px;
+    user-select: none;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+header .icons span:hover {
+    background: #f2f2f2;
+}
+header .current-date {
+    color: #000;
+    font-family: var(--futura-md-fonts);
+    align-self: center;
+    margin: 0;
+}
+.calendar {
+    padding: 0px 30px 20px;
+}
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.calendar .days {
+    margin-bottom: 10px;
+}
+.calendar li {
+    color: #000;
+    font-family: var(--futura-md-fonts);
+    width: calc(100% / 7);
+}
+.calendar .weeks li {
+    cursor: default;
+    color: #000000;
+}
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+}
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #000000;
+    border-radius: 50%;
+    
+}
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+.days li.active::before {
+    background: #B6D657;
+}
+.days li:not(.active):hover::before {
+    background: #B6D657;
+}
+
+.ket-warna {
+  margin-top: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: flex-start!important;
+  flex-direction: column;
+
+}
+
+.ket-warna .hijau {
+  width: 20px;
+  height: 20px;
+  background-color: #B6D657;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #000;
+  margin-right: 10px;
+}
+
+.ket-warna .kuning {
+  width: 20px;
+  height: 20px;
+  background-color: #ECEDA4;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.row-hijau,
+.row-kuning {
+  display: flex;
+  flex-direction: row;  
+  color: #000;
+  font-size: 12px;
+}
+
+/* catatan kalender */
+
+.catatan{
+    width: 600px;
+    height: 100px;
+    background-color: #ECEDA4;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(236, 237, 164, 1);
+    padding: 10px 2%;
+}
+
+.catatan h1 {
+    color: #000;
+
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.catatan ul li{
+    color: #000;
+
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* pop up tambah catatan */
+
+.pop-up {
+  width: 30rem;
+  height: 30rem;
+  background: #ECEDA4;
+  border-radius: 1.5625rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+  
+}
+
+.pop-login{
+  width: 220px;
+  height: 55px;
+  color: #FF6501;
+  font-weight: 700;
+  font-size: 24px;
+  border: none!important;
+  border-radius: 15px;
+}
+
+.pop-daftar{
+  width: 220px;
+  height: 55px;
+ background-color: #FF7D39;
+ color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  border: 4px solid #fff!important;
+  border-radius: 15px;
+}
+
+.pop-up h2{
+  color: #fff;
+  margin-top: 120px;
+  font-size: 32px;
+  font-weight: 600;    
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 9998;
+}
+
+#closeIcon {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  width: 20px; /* Sesuaikan ukuran gambar */
+  height: 20px; /* Sesuaikan ukuran gambar */
+}
+
+/* harga pasar */
+
+.harga-pasar{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-harga{
+  color: #000;
+  margin-top: 120px;
+}
+
+.tagline {
+  color: #4D4D4D;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 170%; /* 34px */
+}
+
+
+.pil-daerah {
+  margin-top: 25px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 300px;
+  margin-bottom: 55px;
+}
+
+.pil-daerah label {
+  color: #000;
+  font-weight: 400;
+}
+
+.pil-daerah select {
+  margin-left: 100px;
+  border: 2px solid #607C3C;
+  background: #FFFDFD;
+ padding: 2px 0 2px 15px;
+  font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400; 
+}
+
+.pil-daerah option {
+  color: #4D4D4D;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 170%; /* 25.5px */
+}
+
+/* slide */
+
+.carausel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 100px 10px 100px;
+  align-items: center;
+  
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 90%;
+}
+
+.box {
+  
+  flex: 0 0 calc(100% / 3.9);
+  /* width: 200px; */
+  box-sizing: border-box;
+  /* padding: 20px; */
+  text-align: center;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 49.48%, rgba(182, 214, 87, 0.59) 100%);
+}
+
+.box img {
+  width: 300px;
+  height: 200px;
+}
+
+#nextBtn,
+#prevBtn{
+  width: 17.5px;
+  height: 35px;
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  text-align: start!important;
+  padding: 12px;
+}
+
+.row1-1{
+  color: #7F9F3E;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 170%; /* 40.8px */
+margin-bottom: 1rem;
+}
+
+.row1-2{
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  color: #565656;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%; /* 25.5px */
+  text-align: right;
+}
+
+.row2-1,
+.row3-1,
+.row4-1{
+  margin-bottom: 1rem;
+  color: #565656;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%; /* 25.5px */
+  text-align: left;
+}
+
+
+.row2-2{
+  margin-bottom: 2.4rem ;
+}
+.row3-2,
+.row4-2 {
+  margin-bottom: 1rem;
+  color: #565656;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%; /* 25.5px */
+  text-align: right;
+}
+
+/* farming-guide.css */
+body {
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  margin: 0; /* Remove default body margin */
+}
+
+#farming-guide {
+  padding: 10px 0; /* Adjust the padding as needed */
+  padding-top: 0px;
+}
+
+.crop-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Changed to 4 columns */
+  grid-gap: 50px;
+}
+
+.crop {
+  text-align: center;
+  position: relative;
+  margin-top: -20px; /* Adjust the margin to move the crops up */
+}
+
+/* Combined vertical line between crops */
+.crop::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -25px; /* Adjust the position of the line */
+  bottom: 0;
+  width: 1px; /* Set the width of the line */
+  background-color: #ddd; /* Set the color of the line */
+  pointer-events: none;
+}
+
+/* Horizontal line between crops */
+.crop::before {
+  content: '';
+  position: absolute;
+  top: -25px; /* Adjust the position of the line */
+  right: 0;
+  left: 0;
+  height: 1px; /* Set the height of the line */
+  background-color: #ddd; /* Set the color of the line */
+  pointer-events: none;
+}
+
+/* Remove the top line for the first row of crops */
+.crop:nth-child(-n + 4)::before {
+  display: none;
+}
+
+.crop img {
+  width: 160px; /* Set the width to 200px */
+  height: 160px; /* Set the height to 200px */
+  object-fit: cover;
+  border-radius: 50%; /* Make the border-radius 50% to create a circular frame */
+  margin-bottom: 10px;
+  border: 5px solid #fff; /* Add a white border for better visibility */
+}
+
+.crop h3 {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.main-header {
+  text-align: center;
+  padding: 100px 0; /* Adjust the padding as needed */
+}
+
+.main-header h1 {
+  font-size: 2.1em; /* Adjust the font size as needed */
+  color: #333;
+  margin-bottom: px;
+}
+
+.main-header h2 {
+  font-size: 1.1em; /* Adjust the font size as needed */
+  color: #666;
+  font-weight: normal; /* Set font weight to normal */
+}
+.crop p {
+  margin-top: 2px; 
+  color: #666; 
+  font-size: small;
+}
+/* Panduan tanaman cabe */
+
+.guide-image {
+  width: 50%;
+  height:90vh; 
+  object-fit: cover;
+  object-position: left;
+  float: left;
+  
+}
+
+.feature-container {
+  margin-left: 50%; 
+}
+
+.feature-section {
+  overflow: hidden; 
+}
+
+.feature-container h1, .feature-container h2, .feature-container p {
+  position: relative;
+  z-index: 1; 
+  top: 180px;
+}
+.feature-container h2{
+  font-size: 18px;
+  font-weight: normal;
+}
+.feature-container h1{
+  font-size: 30px;
+}
+.feature-container p {
+  margin-top: 20px; 
+  top: 380px;
+  color: #000;
+  text-align: left; 
+   }

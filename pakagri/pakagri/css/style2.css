@@ -1,0 +1,560 @@
+:root {
+  --primary: #abc437;
+  --sec: #442d0d;
+  --bg: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-direction: column; /* Mengatur tata letak menjadi kolom */
+  align-items: center; /* Pusatkan elemen secara horizontal */
+  padding: 1.4rem 7%;
+  background-color: #ffffff;
+
+  position: fixed;
+  background: linear-gradient(
+    180deg,
+    #d9d9d9 8.88%,
+    rgba(217, 217, 217, 0) 100.53%
+  );
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-atas {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.navbarlogo {
+  display: flex;
+
+  justify-content: center;
+  width: 100rem;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+/* Logo */
+.navbarlogo .navbar-logo {
+  width: 14rem;
+  justify-content: space-evenly;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navbarlogo .navbar-logo p {
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 2.8rem */
+}
+
+.navbarlogo .navbar-logo h1 {
+  color: #000;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 2.8rem */
+}
+
+/* Navbar Navigation */
+.navbar .navbar-nav {
+  display: flex;
+  margin-top: 1rem; /* Atur margin di atas navbar-nav agar terpisah dari logo */
+}
+
+.navbar .navbar-nav a {
+  /* Anda dapat mengatur properti styling sesuai kebutuhan */
+
+  color: rgba(0, 0, 0, 0.6);
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0 4.75rem;
+  /* Atur margin antara setiap tautan */
+}
+
+.navbar .navbar-nav a:hover {
+  color: var(--sec);
+}
+
+.navbar .navbar-nav a:after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--sec);
+  transform: scaleX(0);
+  transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+.navbar .navbar-extra a {
+  color: #442d0d;
+  margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover {
+  color: var(--sec);
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+.main1 {
+  padding-top: 10.8rem;
+  display: flex;
+  flex-direction: column;
+}
+section.hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  width: auto;
+}
+.gambarhome {
+  width: 100%;
+}
+.content {
+  padding-top: 10rem;
+  position: absolute;
+}
+
+.box1 {
+}
+.hero .content h2 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin-bottom: 1rem; /* Mengurangi margin-bottom pada h1 */
+}
+.cta {
+  text-align: center;
+  width: 15.125rem;
+  height: 4.5625rem;
+  align-self: center;
+  margin-top: 3rem; /* Menambah margin-top pada tombol login */
+  margin-bottom: 8rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #607c3c;
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.artikel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artikel h2 {
+  color: #607c3c;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 1.8rem */
+  font-weight: 700;
+}
+
+.artikel h1 {
+  color: #000;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 2.4375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%; /* 3.4125rem */
+  letter-spacing: 0.02438rem;
+}
+
+.boxthree {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.boxt {
+  flex-direction: column;
+  display: flex;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  width: 22rem;
+  height: 27.0625rem;
+  flex-shrink: 0;
+  background: #b6d657;
+}
+.artikel1 {
+  background-color: aqua;
+  width: 22rem;
+  height: 13.5625rem;
+  flex-shrink: 0;
+}
+.boxt div {
+}
+h3 {
+  color: black;
+  display: block;
+}
+
+.buton {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.5rem */
+  border-radius: 0.25rem;
+  background: #607c3c;
+  width: 13.125rem;
+  height: 2.8125rem;
+  flex-shrink: 0;
+}
+.artikel2 {
+  justify-content: space-between;
+  padding: 1.31rem;
+  display: flex;
+  flex-direction: column;
+  width: 22rem;
+  height: 13.5rem;
+  flex-shrink: 0;
+}
+
+.textjudul {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 120%; /* 1.5rem */
+}
+.textisi {
+  color: #000;
+  font-family: Poppins;
+  font-size: 0.8125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 0.975rem */
+}
+
+.feature {
+  margin-top: 30rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.kotak {
+  margin-top: 2rem;
+  width: 95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.konten {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.fitur {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.fit {
+  background-color: #abc437;
+  background: linear-gradient(
+    135deg,
+    #abc437 74.81% rgba(171, 196, 55, 0) 23.79%
+  );
+  margin-bottom: 6rem;
+  display: flex;
+  flex-direction: row;
+  width: 21.5rem;
+  height: 12.5rem;
+  flex-shrink: 0;
+}
+.garistengah {
+  margin-left: 14rem;
+  margin-right: 14rem;
+  width: 0.125rem;
+  height: 23.37575rem;
+  border: 1px solid black;
+}
+.gambarf {
+  width: 10.5625rem;
+  height: 12.5rem;
+  flex-shrink: 0;
+}
+
+.feature h2 {
+  color: #607c3c;
+  text-align: center;
+}
+.feature h1 {
+  color: #000000;
+  text-align: center;
+}
+
+.garis {
+  margin-top: 23.5rem;
+  width: 95rem;
+  height: 13.6875rem;
+  flex-shrink: 0;
+
+  background: #607c3c;
+}
+.sidef {
+  justify-content: space-around;
+  padding-left: 1rem;
+  padding-top: 1.3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sidef .textjudul {
+  color: #000;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 1.5rem */
+}
+
+.sidef .textisi {
+  color: #000;
+  font-family: Poppins;
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 275;
+  line-height: 120%; /* 0.825rem */
+}
+
+.sidef button {
+  color: white;
+  width: 6.125rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  background: #3d8037;
+}
+
+.faq {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq h2 {
+  color: #607c3c;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 1.8rem */
+}
+
+.faq h1 {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Poppins;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem; /* 70% */
+  margin-bottom: 2rem;
+}
+
+.tanya1 {
+  .tanya1 {
+    width: 32.375rem;
+    height: 4.6875rem;
+
+    border-radius: 0.75rem;
+    background: #eceda4;
+    color: #000;
+    display: flex; /* Membuat elemen menjadi flex container */
+    justify-content: flex-start; /* Menempatkan konten di sebelah kiri */
+  }
+}
+
+.tanya {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.isitanya {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5rem;
+  width: 32.375rem;
+  height: 4.6875rem;
+  flex-shrink: 0;
+  border-radius: 0.75rem;
+  background: #eceda4;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+.kiri {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+.panah {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #000;
+}
+.isitanya .isi {
+  color: #000;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem; /* 175% */
+}
+
+footer {
+  margin-top: 7rem;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  height: 25.6875rem;
+  background: #748c55;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fotatas {
+  width: 96rem;
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0px 02px 0px 0px rgba(0, 0, 0, 0.25);
+}
+.fotbawah {
+  padding-top: 1rem;
+  text-align: center;
+  width: 96rem;
+}
+.logofot {
+  margin-top: 2rem;
+  width: 3.35188rem;
+  height: 3.88213rem;
+  flex-shrink: 0;
+  margin-left: 9rem;
+  margin-right: 5rem;
+}
+.fotisi {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.01281rem;
+  margin-top: 1rem;
+}
+fotisi {
+  margin-right: 18rem;
+  height: 18rem;
+}
+.contak {
+  margin-top: 3rem;
+  width: 16rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.bulat {
+  background-color: #fff;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 2.5rem;
+}
+.fotkontak {
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 0rem;
+}
+.fotjudul {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: -0.01281rem;
+}
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/* Hp */
+@media (max-width: 450px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+
+/* Kalender */
+

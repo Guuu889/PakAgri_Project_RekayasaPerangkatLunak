@@ -1,0 +1,531 @@
+:root {
+    --primary: #abc437;
+    --sec: #442d0d;
+    --bg: #ffffff;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--bg);
+    color: #fff;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .material-symbols-rounded {
+    font-family: 'Material Icons';
+    /* tambahkan properti CSS lainnya sesuai kebutuhan */
+    font-size: 28px;
+}
+
+
+  /* Navbar */
+
+
+
+.navbar {
+    display: flex;
+    flex-direction: row; /* Mengatur tata letak menjadi kolom */
+    justify-content: center;
+    align-items: center; /* Pusatkan elemen secara horizontal */
+    padding: 0.5rem 7%;
+    background-color: #ffffff;
+    position: fixed;
+    box-shadow: linear-gradient(
+      180deg,
+      #d9d9d9 8.88%,
+      rgba(217, 217, 217, 0) 100.53%
+    );
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+
+
+navbar .navbar-nav a {
+    /* Anda dapat mengatur properti styling sesuai kebutuhan */
+  
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 4.75rem;
+    /* Atur margin antara setiap tautan */
+  }
+  
+  .navbar .navbar-nav {
+    display: flex;
+    margin-top: 1rem; /* Atur margin di atas navbar-nav agar terpisah dari logo */
+    
+  }
+
+  .navbar .navbar-nav a {
+    /* Anda dapat mengatur properti styling sesuai kebutuhan */
+  
+    color: rgba(0, 0, 0, 0.6);
+    font-family: Poppins;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0 4.75rem;
+    /* Atur margin antara setiap tautan */
+  }
+
+  .navbar .navbar-nav a:hover {
+    color: var(--sec);
+  }
+  
+  .navbar .navbar-nav a:after {
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--sec);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+  }
+  
+  .navbar .navbar-nav a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  .navbar .navbar-extra a {
+    color: #442d0d;
+    margin: 0 0.5rem;
+  }
+  
+  .navbar .navbar-extra a:hover {
+    color: var(--sec);
+  }
+
+  .nav-active{
+    font-weight: 700!important;
+  }
+  
+  .nav-icon img{
+    width: 20px;
+    margin-left: 50px ;
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  /* kalender */
+
+  .wrapper {
+    margin-top: 100px;
+    width: 500px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.wrapper header {
+    display: flex;
+    align-items: center;
+    padding: 30px 38px 20px;
+    justify-content: space-between;
+    width: 100%;
+}
+header .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+header .icons span {
+    height: auto;
+    width: 40px;
+    cursor: pointer;
+    color: #000;
+    text-align: center;
+    line-height: 38px;
+    user-select: none;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+header .icons span:hover {
+    background: #f2f2f2;
+}
+header .current-date {
+    color: #000;
+    font-family: var(--futura-md-fonts);
+    align-self: center;
+    margin: 0;
+}
+.calendar {
+    padding: 0px 30px 20px;
+}
+.calendar ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+.calendar .days {
+    margin-bottom: 10px;
+}
+.calendar li {
+    color: #000;
+    font-family: var(--futura-md-fonts);
+    width: calc(100% / 7);
+}
+.calendar .weeks li {
+    cursor: default;
+    color: #000000;
+}
+.calendar .days li {
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    margin-top: 20px;
+}
+.days li.inactive {
+    color: #aaa;
+}
+
+.days li.active {
+    color: #000000;
+    border-radius: 50%;
+    
+}
+.days li::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    height: 40px;
+    width: 40px;
+    z-index: -1;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+}
+.days li.active::before {
+    background: #B6D657;
+}
+.days li:not(.active):hover::before {
+    background: #B6D657;
+}
+
+.date-content{
+  background-color: #ECEDA4;
+  padding: 9px 15px 9px 15px;
+  border-radius: 10px;
+ 
+}
+
+
+.ket-warna {
+  margin-top: 10px;
+  width: 40%;
+  display: flex;
+  justify-content: flex-start!important;
+  flex-direction: column;
+
+}
+
+.ket-warna .hijau {
+  width: 20px;
+  height: 20px;
+  background-color: #B6D657;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  color: #000;
+  margin-right: 10px;
+}
+
+.ket-warna .kuning {
+  width: 20px;
+  height: 20px;
+  background-color: #ECEDA4;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.row-hijau,
+.row-kuning {
+  display: flex;
+  flex-direction: row;  
+  color: #000;
+  font-size: 12px;
+}
+
+/* catatan kalender */
+
+.catatan{
+    width: 600px;
+    height: 100px;
+    background-color: #ECEDA4;
+    margin-top: 2rem;
+    border-radius: 8px;
+    box-shadow: 0px 4px 4px 0px rgba(236, 237, 164, 1);
+    padding: 10px 2%;
+    margin-bottom: 10px;
+}
+
+.catatan h1 {
+    color: #000;
+
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.catatan ul li{
+    color: #000;
+
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+/* pop up tambah catatan */
+
+.pop-up {
+  width: 30rem;
+  height: 30rem;
+  background: #ECEDA4;
+  border-radius: 1.5625rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  box-shadow: 0px 0.25rem 0.25rem 0px rgba(0, 0, 0, 0.25);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 9999;
+  
+}
+
+.pop-login{
+  width: 220px;
+  height: 55px;
+  color: #FF6501;
+  font-weight: 700;
+  font-size: 24px;
+  border: none!important;
+  border-radius: 15px;
+}
+
+.pop-daftar{
+  width: 220px;
+  height: 55px;
+ background-color: #FF7D39;
+ color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  border: 4px solid #fff!important;
+  border-radius: 15px;
+}
+
+.pop-up h2{
+  color: #fff;
+  margin-top: 120px;
+  font-size: 32px;
+  font-weight: 600;    
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 9998;
+}
+
+#closeIcon {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  cursor: pointer;
+  width: 20px; /* Sesuaikan ukuran gambar */
+  height: 20px; /* Sesuaikan ukuran gambar */
+}
+
+/* harga pasar */
+
+.harga-pasar{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-harga{
+  color: #000;
+  margin-top: 120px;
+}
+
+.tagline {
+  color: #4D4D4D;
+text-align: center;
+font-family: Poppins;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 170%; /* 34px */
+}
+
+
+.pil-daerah {
+  margin-top: 25px;
+  display: flex;
+  align-items: flex-start;
+  margin-left: 300px;
+  margin-bottom: 55px;
+}
+
+.pil-daerah label {
+  color: #000;
+  font-weight: 400;
+}
+
+.pil-daerah select {
+  margin-left: 100px;
+  border: 2px solid #607C3C;
+  background: #FFFDFD;
+ padding: 2px 0 2px 15px;
+  font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400; 
+}
+
+.pil-daerah option {
+  color: #4D4D4D;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 400;
+line-height: 170%; /* 25.5px */
+}
+
+/* slide */
+
+.carausel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px 100px 10px 100px;
+  align-items: center;
+  
+}
+
+.slider-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  width: 90%;
+}
+
+.box {
+  
+  flex: 0 0 calc(100% / 3.9);
+  /* width: 200px; */
+  box-sizing: border-box;
+  /* padding: 20px; */
+  text-align: center;
+  border: 1px solid #ccc;
+  margin-left: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 49.48%, rgba(182, 214, 87, 0.59) 100%);
+}
+
+.box img {
+  width: 300px;
+  height: 200px;
+}
+
+#nextBtn,
+#prevBtn{
+  width: 17.5px;
+  height: 35px;
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: row;
+  text-align: start!important;
+  padding: 12px;
+}
+
+.row1-1{
+  color: #7F9F3E;
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 700;
+line-height: 170%; /* 40.8px */
+margin-bottom: 1rem;
+}
+
+.row1-2{
+  margin-top: 0.2rem;
+  margin-bottom: 0.4rem;
+  color: #565656;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%; /* 25.5px */
+  text-align: right;
+}
+
+.row2-1,
+.row3-1,
+.row4-1{
+  margin-bottom: 1rem;
+  color: #565656;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%; /* 25.5px */
+  text-align: left;
+}
+
+
+.row2-2{
+  margin-bottom: 2.4rem ;
+}
+.row3-2,
+.row4-2 {
+  margin-bottom: 1rem;
+  color: #565656;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 170%; /* 25.5px */
+  text-align: right;
+}
